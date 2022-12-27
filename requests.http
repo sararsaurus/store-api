@@ -1,0 +1,27 @@
+### Products Index
+GET http://localhost:3000/products.json
+
+### Products Create
+POST http://localhost:3000/products.json
+Content-Type: application/json
+
+{
+  "name": "Giraffe",
+  "price": 5,
+  "description": "Not the worst giraffe pattern out there.",
+  "image": "https://lh3.googleusercontent.com/-Ruw1ZgP_38Q/V4Js2LvrpaI/AAAAAAAACSU/gBv5ZjTp4XE/s640/blogger-image--780847963.jpg"
+}
+
+### Products Show 
+GET http://localhost:3000/products/1.json
+
+### Products Update
+PATCH http://localhost:3000/products/5.json
+Content-Type: application/json
+
+{
+  "description": "ANOTHER GIRAFFE!"
+}
+
+### Products Destroy
+DELETE http://localhost:3000/products/5.json
