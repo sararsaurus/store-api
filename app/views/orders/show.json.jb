@@ -1,0 +1,7 @@
+{
+id: @order.id,
+product: @order.product,
+subtotal: @order.subtotal,
+tax: @order.tax,
+total: @order.total
+}

@@ -1,4 +1,16 @@
 class OrdersController < ApplicationController
+  # before_action :authenticate_user
+
+  def index
+    @orders = current_user.orders
+    render :index
+  end
+
+  def show
+    @order = current_user.orders.find_by(id: params[:id])
+    render :show
+  end
+
   def create
     product = Product.find_by(id: params[:product_id])
 
@@ -16,15 +28,5 @@ class OrdersController < ApplicationController
     )
     order.save
     render json: order.as_json
-  end
-
-  def show
-    order = Order.find_by(id: params[:id])
-    render json: order.as_json
-  end
-
-  def index
-    orders = Order.all
-    render json: orders.as_json
   end
 end
