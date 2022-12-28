@@ -4,10 +4,22 @@
 
 # Product.create!(name: "Bad Cat", price: 5, description: "A somewhat abstract interpretation of a cat.", image: "https://thoresbycottage.com/wp-content/uploads/2018/08/IMG_1289-1024x683.jpg")
 
-Category.create!([
-  { name: "Cheap" },
-  { name: "Wearable" },
-  { name: "Infant-Safe" },
-  { name: "Sea Creature" },
-  { name: "Land Animal" },
-])
+# Product.create!(name: "Little Octopus", price: 9, description: "A teensy octopus who loves to make new friends", image: "https://images4-f.ravelrycache.com/uploads/AllFromJade/722750265/IMG_0660_small2.JPG")
+
+# Category.create!([
+#   { name: "Cheap" }, #1
+#   { name: "Wearable" }, #2
+#   { name: "Infant-Safe" }, #3
+#   { name: "Sea Creature" }, #4
+#   { name: "Land Animal" }, #5
+# ])
+
+# CategoryProduct.create!([
+#   { category_id: 1, product_id: 4 },
+#   { category_id: 1, product_id: 3 },
+#   { category_id: 3, product_id: 2 },
+#   { category_id: 5, product_id: 1 },
+#   { category_id: 5, product_id: 3 },
+#   { category_id: 5, product_id: 4 },
+# ])
+# CategoryProduct.create!(category_id: 4, product_id: 11)
