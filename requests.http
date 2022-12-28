@@ -20,16 +20,16 @@ Content-Type: application/json
 GET http://localhost:3000/products/1.json
 
 ### Products Update
-PATCH http://localhost:3000/products/9.json
+PATCH http://localhost:3000/products/10.json
 Authorization: Bearer {{admin-jwt}}
 Content-Type: application/json
 
 {
-  "description": "NO MORE GIRAFFE!"
+  "description": "OMGG GIRAFFEESSS!"
 }
 
 ### Products Destroy
-DELETE http://localhost:3000/products/9.json
+DELETE http://localhost:3000/products/10.json
 Authorization: Bearer {{admin-jwt}}
 
 ### USERS CREATE (signup)
