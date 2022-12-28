@@ -50,3 +50,17 @@ Content-Type: application/json
   "email": "test@test.com",
   "password": "password"
 }
+
+### ORDERS CREATE
+POST http://localhost:3000/orders.json
+# Authorization: Bearer {{jwt}}
+Content-Type: application/json
+
+{
+  "user_id": 1,
+  "product_id": 1,
+  "quantity": 2,
+  "subtotal": 99,
+  "tax": 9,
+  "total": 108
+  }
