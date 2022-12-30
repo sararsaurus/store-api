@@ -1,6 +1,6 @@
 {
 id: @order.id,
-product: @order.product,
+products: @order.products,
 subtotal: @order.subtotal,
 tax: @order.tax,
 total: @order.total

@@ -20,16 +20,16 @@ Content-Type: application/json
 GET http://localhost:3000/products/1.json
 
 ### Products Update
-PATCH http://localhost:3000/products/11.json
+PATCH http://localhost:3000/products/13.json
 Authorization: Bearer {{admin-jwt}}
 Content-Type: application/json
 
 {
-  "description": "A teensy octopus who loves to make new friends."
+  "description": "blah."
 }
 
 ### Products Destroy
-DELETE http://localhost:3000/products/12.json
+DELETE http://localhost:3000/products/13.json
 Authorization: Bearer {{admin-jwt}}
 
 ### USERS CREATE (signup)
@@ -52,14 +52,15 @@ Content-Type: application/json
   "password": "password"
 }
 
+#will this need to be product in views/index if i only have one?
 ### ORDERS Index
 GET http://localhost:3000/orders.json
 Authorization: Bearer {{admin-jwt}}
 
 
-
+#will this need to be product in views/show if i only have one?
 ### ORDERS SHOW 
-GET http://localhost:3000/orders/1.json
+GET http://localhost:3000/orders/6.json
 Authorization: Bearer {{admin-jwt}}
 
 
@@ -67,11 +68,6 @@ Authorization: Bearer {{admin-jwt}}
 POST http://localhost:3000/orders.json
 Authorization: Bearer {{admin-jwt}}
 Content-Type: application/json
-
-{
-  "product_id": 2,
-  "quantity": 4
-  }
 
 
 ### CARTED PRODUCTS INDEX
