@@ -1,4 +1,4 @@
-@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzIyODI0MDZ9._pM3gd0BBPeYotH7JUr30o8bHesIWA4TUpMJ9d-_1xo
+@admin-jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NzI0NTE0Njh9.TQEu-LMQNcCQ1uzSviS-pJFQy4TwbAcS2xyG68S_xkg
 @jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NzIyODAzMjZ9.hxDI56taAHOZ7fLN75WIpy44meK6oRs9HLJB_CIu0cw
 
 ### Products Index
@@ -12,7 +12,7 @@ Content-Type: application/json
 {
   "name": "Giraffe",
   "price": 5,
-  "description": "YET ANOTHER ONE.",
+  "description": "UGH YET ANOTHER ONE.",
   "image": "https://lh3.googleusercontent.com/-Ruw1ZgP_38Q/V4Js2LvrpaI/AAAAAAAACSU/gBv5ZjTp4XE/s640/blogger-image--780847963.jpg"
 }
 
@@ -20,16 +20,16 @@ Content-Type: application/json
 GET http://localhost:3000/products/1.json
 
 ### Products Update
-PATCH http://localhost:3000/products/10.json
+PATCH http://localhost:3000/products/11.json
 Authorization: Bearer {{admin-jwt}}
 Content-Type: application/json
 
 {
-  "description": "OMGG GIRAFFEESSS!"
+  "description": "A teensy octopus who loves to make new friends."
 }
 
 ### Products Destroy
-DELETE http://localhost:3000/products/10.json
+DELETE http://localhost:3000/products/12.json
 Authorization: Bearer {{admin-jwt}}
 
 ### USERS CREATE (signup)
@@ -54,18 +54,18 @@ Content-Type: application/json
 
 ### ORDERS Index
 GET http://localhost:3000/orders.json
-Authorization: Bearer {{jwt}}
+Authorization: Bearer {{admin-jwt}}
 
 
 
 ### ORDERS SHOW 
 GET http://localhost:3000/orders/1.json
-Authorization: Bearer {{jwt}}
+Authorization: Bearer {{admin-jwt}}
 
 
 ### ORDERS CREATE
 POST http://localhost:3000/orders.json
-Authorization: Bearer {{jwt}}
+Authorization: Bearer {{admin-jwt}}
 Content-Type: application/json
 
 {
@@ -73,5 +73,27 @@ Content-Type: application/json
   "quantity": 4
   }
 
+
+### CARTED PRODUCTS INDEX
+GET http://localhost:3000/carted_products.json
+Authorization: Bearer {{admin-jwt}}
+
+
+### Carted Products CREATE
+
+POST http://localhost:3000/carted_products.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
+
+{
+  "product_id": 1,
+  "quantity": 4
+}
+
+### Carted Products DESTROY
+
+DELETE http://localhost:3000/carted_products/2.json
+Content-Type: application/json
+Authorization: Bearer {{admin-jwt}}
 
 
