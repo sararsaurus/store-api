@@ -4,5 +4,9 @@
   name: product.name,
   price: product.price,
   description: product.description,
+  categories: product.categories,
+  is_discounted?: product.is_discounted?,
+  tax: product.tax,
+  total: product.total,
   }
 end
